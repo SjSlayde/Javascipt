@@ -1,0 +1,220 @@
+exercice1:
+Si toto + 4 < tutu OU Tata <> "OK" Alors
+Tutu ← Tutu – 1
+Sinon
+Tutu ← Tutu + 1
+Finsi
+
+exercice2:
+VARIABLE heure,min en numérique
+debut
+ECRIRE " l'heure"
+LIRE heure
+ECRIRE "les minute"
+LIRE min 
+    min <- min+1    
+    si min = 60 
+        heure <- heure +1
+        min <- 0 
+        si  heure = 24 alors
+            heure <- "0"
+        Finsi 
+    Finsi
+    ECRIRE "dans une minute il sera" heure "heure" min "minute"
+Fin
+
+exercice3:
+VARIABLE heure,min,sec en numérique
+debut
+ECRIRE " l'heure"
+LIRE heure
+ECRIRE "les minute"
+LIRE min
+ECRIRE "les secondes"
+LIRE sec
+sec <- sec +1
+ si sec=60
+    min <- min+1 
+    sec <- 0   
+    si min = 60 
+        heure <- heure +1
+        min <- 0 
+        si  heure = 24 alors
+            heure <- "0"
+        Finsi 
+    Finsi
+ Finsi
+    ECRIRE "dans une seconde il sera" heure "heure" min "minute" sec "seconde"
+Fin
+
+exercice4 
+VARIABLE pho,A,B,C en numérique
+debut
+A<-0,10
+B<-0,09
+C<-0,08
+ECRIRE " le nombre de photocopie"                               52
+LIRE pho
+    si pho =<10
+        pho<- A*pho 
+    SinonSi pho > 10 et pho < 31
+        p <- A*10 + B*(pho-10)
+    SinonSi pho > 30
+        A*10 + B*20 + C*(pho-30)
+    Finsi
+    ECRIRE" total:"pho
+Fin
+
+exercice5
+VARIABLE genre en Caractère
+VARIABLE age en numérique
+ECRIRE "genre de la personne"
+LIRE genre
+ECRIRE "l'age de la personne"
+Lire age
+    si genre = homme ET age < 20
+        ECRIRE "la personne doit payer la taxe car c'est un "genre" et a "age"."
+    SinonSi genre = femme ET (age>18 et age<35)  
+        ECRIRE "la personne doit payer la taxe car c'est une "genre" et a "age"."
+    Sinon
+        ECRIRE "la personne ne doit pas payer la taxe car c'est un/une "genre" et a "age"."
+    Finsi
+Fin
+
+exercice6
+VARIABLE A,B,C,D en numerique
+debut
+ECRIRE "le resultat du 1er paricipant"
+LIRE A
+ECRIRE "le resultat du 2eme paricipant"
+LIRE B
+ECRIRE "le resultat du 3eme paricipant"
+LIRE C
+ECRIRE "le resultat du 4eme paricipant"
+LIRE D
+    Si A =<50 
+        ECRIRE "le candidat a gagner"
+    SinonSi B =< 50 OU C =< 50 OU D =< 50
+    SinonSi A > 12,5
+        Si A>B ET A>C ET A>D
+            ECRIRE "le candidat est en ballotage favorable"
+        Sinon
+            ECRIRE "le candidat n'est pas favorit"
+        Finsi
+    Sinon
+            ECRIRE "le candidiat est eliminée"
+    Finsi
+    Finsi
+Fin
+
+exercice7
+VARIABLE ta,age,ap,ac en numerique
+VARIABLE c1,c2,c3,c4,c5,c6,c7 en booléen
+ECRIRE "age de la personne"
+LIRE age
+ECRIRE "depuis combien de temps la personne a obtenue sont permis"
+LIRE ap
+ECRIRE "le nombre d'accident de la route provoqué"
+LIRE ac
+ECRIRE "veuillez entrez de depuis combien de temps etes vous chez nous"
+LIRE ta
+c1<- age =< 25 ET ap < 2 ET ac = 0
+c2<- age =< 25 ET ap >2 ET ac = 0
+c3<- age > 25 ET ap <2 ET ac = 0
+c4<- age =< 25 ET ap >2 ET ac = 1
+c5<- age > 25 ET ap < 2 ET ac =0
+c6<- age > 25 ET ap < 2 ET ac =1
+c7<- age > 25 ET ap < 2 ET ac =2
+    SinonSi c5 
+        si ta > 1
+        ECRIRE "vous etes élligible a la vignette bleu"
+        Sinon
+        ECRIRE "vous etes élligible a la vignette vert"
+        Finsi
+    SinonSi c2 OU c6 OU c3
+        si ta > 1
+        ECRIRE "vous etes élligible a la vignette vert"
+        Sinon
+        ECRIRE "vous etes élligible a la vignette orange"
+        Finsi
+    SinonSi c1 ou c4 ou c7
+        si ta > 1
+        ECRIRE "vous etes élligible a la vignette orange"
+        Sinon 
+        ECRIRE "vous etes élligible a la vignette rouge"
+        Finsi
+    Sinon
+        ECRIRE "vous n'etes pas élligible a une vignette"
+    Finsi
+Fin
+
+exercice8
+VARIABLE j,m,a en numérique
+VARIABLE error,good en caractére
+debut
+ECRIRE "le jour"
+LIRE j
+ECRIRE "le mois en chiffre"
+LIRE m
+ECRIRE "l'année"
+LIRE a
+error<- "date invalide"
+good<- "date valide"
+    Si m<1 OU m>12 
+        ECRIRE error
+    SinonSi m = 1 OU m = 3 OU m = 5 OU m = 7 OU m = 8 OU m = 10 OU m = 12
+        Si j<1 OU j>31
+            ECRIRE error
+        Sinon
+            Ecrire good
+        Finsi
+    SinonSi m=2 
+        Si j<1 ou j>29
+            ECRIRE error
+        SinonSi a dp 400 OU (non(a dp 100) et a dp 4 )
+            Si j = 29
+                ECRIRE good
+            Finsi
+        SinonSi j>=1 et j<=28
+            ECRIRE  good
+        Sinon
+            ECRIRE error
+        Finsi
+    SinonSi j<0 et j>31 
+        ECRIRE good
+    Sinon 
+        ECRIRE error
+    Finsi
+Fin
+
+reponse alternative de la soluce:
+Variables J, M, A, JMax en Numérique
+Variables VJ, VM, B en Booleen
+Début
+Ecrire "Entrez le numéro du jour"
+Lire J
+Ecrire "Entrez le numéro du mois"
+Lire M
+Ecrire "Entrez l'année"
+Lire A
+B ← A dp 400 ou (non(A dp 100) et A dp 4)
+Jmax ← 0
+VM ← M >= 1 et M =< 12
+Si VM Alors
+  Si M = 2 et B Alors
+    JMax ← 29
+  SinonSi M = 2 Alors
+    JMax ← 28
+  SinonSi M = 4 ou M = 6 ou M = 9 ou M = 11 Alors
+    JMax ← 30
+  Sinon
+    JMax ← 31
+  FinSi
+  VJ ← J >= 1 et J =< Jmax
+   Si VJ et VM alors
+  Ecrire "La date est valide"
+    Sinon
+  Ecrire "La date n'est pas valide"
+   FinSi
+   FinSi
+Fin

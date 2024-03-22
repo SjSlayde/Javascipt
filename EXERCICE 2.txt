@@ -1,0 +1,46 @@
+Exercice de la partie 1 sur la page pdf.
+exercice1
+il multiplie par 2la valeur de val, stocke le produi dans la valeur double , ensuite affiche "val" et ensuite "double"
+
+exercice2:
+ECRIRE val
+LIRE val
+val<-val^2
+LIRE val
+
+exercice3:
+ECRIRE prix produit("pp")
+LIRE pp;
+ECRIRE nombre d'article ("pa")
+LIRE "pa";
+ECRIRE tva
+LIRE "tva"
+ttc <- pp*pa+tva
+LIRE TTC
+
+exercice4:
+A<-belle marquise, vos beaux yeux me font mourir d’amour
+LIRE "a"
+ECRIRE suite B
+LIRE "A&B";
+ECRIRE suite C
+LIRE "A&C";
+ECRIRE suite D
+LIRE "A&D"
+LIRE "A&B&C&D"
+
+
+OU
+
+VARIABLE a,b,c en numérique
+ECRIRE belle marquise,
+LIRE a
+ECRIRE vos beaux yeux
+LIRE b
+ECRIRE me font mourir d'amour
+LIRE c
+
+ECRIRE a&b&c
+ECRIRE c&a&b
+ECRIRE b&a&C
+ECRIRE c&b&a

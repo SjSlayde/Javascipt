@@ -1,0 +1,121 @@
+
+exercice 3.1:
+VARIABLE one en numerique
+debut
+ECRIRE "le nombre" ("one")
+LIRE "one"
+    si "one" > 0 alors
+        ECRIRE "le nombre est positif"
+        si one < 0 alors
+            ECRIRE "le nombre est negatif"
+        Finsi
+    Finsi
+Fin
+
+exercice 3.2:
+VARIABLE p,q en numerique
+debut
+ECRIRE "le premier nombre" ("p")
+LIRE "p"
+ECRIRE "le deuxieme nombre" ("q")
+LIRE "q"
+    si (p >0 ET q > 0) OU (p > 0 ET q > 0) alors
+        ECRIRE "le nombre est positif"
+    Sinon
+        ECRIRE "le nombre est negatif"
+    Finsi
+Fin
+
+
+exercice 3.3:
+VARIABLE g,p,t en numerique
+debut
+ECRIRE "le premier nom"("g")
+LIRE "g"
+ECRIRE "le deuxieme nom"("p")
+LIRE "p"
+ECRIRE "le troisieme nom" ("t")
+LIRE "t"
+    si g < p et p < t alors
+        ECRIRE "les nom sont ranger dans l'orde l'aphabetique"
+    Sinon
+        ECRIRE "les nom ne sont pas ranger dans l'orde alphabetique"
+        Finsi
+    Finsi
+Fin
+
+exercice 3.4:
+VARIABLE one en numerique
+debut
+ECRIRE "le premier nombre" ("one")
+LIRE "one"
+    si "one" > 0 alors
+        ECRIRE "le nombre est positif"
+    SinonSi one < 0 alors
+        ECRIRE "le nombre est negatif"
+    SinonSi one = 0 alors
+        ECRIRE "le nombre 0 est à la fois positif et négatif"
+    Finsi
+Fin
+
+exercice 3.5:
+VARIABLE p,q en numerique
+debut
+ECRIRE "le premier nombre"("p")
+LIRE "p"
+ECRIRE "le deuxieme nombre"("q")
+LIRE q
+    si (p >0 ET q > 0) OU (p > 0 ET q > 0) alors
+        ECRIRE "le nombre est positif"
+    SinonSi ( p = 0 ET q = 0) Alors
+        ECRIRE le produit est nul 
+    Sinon
+        ECRIRE "le nombre est negatif"
+    Finsi
+Fin
+
+exercice 3.6:
+VARIABLE age en numerique
+debut
+ECRIRE "l'age de l'enfant"("age")
+LIRE age
+    si "age" =< 6 alors
+        ECRIRE "l'enfant est trop petit"
+    Sinonsi "age" =< 7 alors
+        ECRIRE "l'enfant est dans la categorie Poussin"
+    Sinonsi "age" =< 9 alors
+        ECRIRE "l'enfant est dans la categorie Pupille"
+    Sinonsi "age" =< 11 alors
+        ECRIRE "l'enfant est dans la categorie Mimine"
+    Sinonsi "age" = 12 alors
+        ECRIRE "l'enfant est dans la categorie Cadet"
+    Sinonsi "age" > 12 alors
+        ECRIRE "ce n'est plus un enfant"
+    Finsi
+Fin
+
+variante:
+VARIABLE age en numerique
+Début
+    Ecrire “l'age de l'enfant :”("age")
+    Lire "age"
+    Z ← age < 6
+    A ← age =< 7
+    B ← age =< 9
+    C ← age =< 11
+    D ← age = 12
+
+    Si A Alors
+        ECRIRE "l'enfant est dans la categorie Poussin"
+        SinonSi B Alors
+            ECRIRE "l'enfant est dans la categorie Pupille"
+        SinonSi C Alors
+            ECRIRE "l'enfant est dans la categorie Mimine"
+        SinonSi D Alors
+            ECRIRE "l'enfant est dans la categorie Cadet"
+        SinonSi Z Alors
+            ECRIRE "l'enfant est trop petit"
+        Sinon
+            ECRIRE "ce n'est plus un enfant"        
+    Finsi
+Fin
