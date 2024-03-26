@@ -146,3 +146,66 @@ console.log(nombre.length)
 console.log(total)
 console.log(total/nombre.length)
 console.log(nombre)
+
+function verif2(){ //controle un formulaire
+    coordonnee = document.getElementById("société").value
+    filtre = new RegExp("^[a-z]+$")
+    filtreCP = new RegExp("^([0-9]{5})+$")
+    filtreEmail = new RegExp("^[_a-z0-9.-]+@[_a-z0-9.-]+.[a-z]{2,4}$")
+    filtre4 = new RegExp("^0[1-9]([-. ]?[0-9]{2}){4}$")
+    resultat = filtre.test(coordonnee);
+    if(coordonnee == false){
+        alert("Veuillez rentrer un nom de société.")
+    }        
+    coordonnee = document.getElementById("personne").value
+    resultat = filtre.test(coordonnee);
+    if(resultat == false){
+        alert("Veuillez mettre une personne a conctater.")
+    }   
+    coordonnee = document.getElementById("Adresse").value
+    resultat = filtre.test(coordonnee);
+    if(coordonnee == false){
+        alert("Veuillez mettre une adresse.")
+    } 
+    coordonnee = document.getElementById("CP").value
+    resultat2 = filtreCP.test(coordonnee)
+    if(resultat2 == false){
+        alert("Veuillez mettre un code postal a cinq chiffre.")
+    } 
+    coordonnee = document.getElementById("Ville").value
+    resultat = filtre.test(coordonnee);
+    if(resultat == false){
+        alert("Veuillez mettre une Ville.")
+    } 
+    coordonnee = document.getElementById("Email").value// n'autorise pas les , dans le nom de l'email regarder les caractere autoriser pour les adresse email 
+    resultat3 = filtreEmail.test(coordonnee);
+    if(resultat3 == false){
+        alert("Veuillez mettre une adresse email.")
+    }
+    coordonnee = document.getElementById("tel").value
+    resultat4 = filtre4.test(coordonnee);
+    console.log(coordonnee)
+    if(resultat4 == false){
+        alert("Veuillez mettre un numéros de téléphone valide.")
+    }
+    coordonnee = document.getElementById("select").value
+    if(coordonnee == ""){
+        alert("Veuillez choisir un environnement technique du projet.")
+    }
+    coordonnee = document.getElementById("textarea").value
+    if(coordonnee == ""){
+        alert("Veuillez decrire votre projet.")
+    }
+}
+
+const choixElement = document.getElementById('select');//fait apparaitre une jolie zone de texte si la personjne utilise le menu deroulant
+const textareaElement = document.getElementById('textarea');
+
+choixElement.addEventListener('change', () => {
+  const choix = choixElement.value;
+  if (choix !== "choix0") {
+    textareaElement.style.display = 'block';
+  } else {
+    textareaElement.style.display = 'none';
+  }
+});
