@@ -1,3 +1,23 @@
+html{
+    background-image: url("e7b4ce09c703210ab8f75b017c7eaf0951c5a95b737ee8120602845c1c1d944b.jpeg");
+    background-size: 100% ;
+}
+body{
+    font-family: Arial, "Times New Roman", sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+image{
+    width: auto;
+}
+input,textarea{
+    background-color: lightgray
+}
+.exo{
+    color: white;
+}
 form{
     width: 700px;
 }
@@ -6,7 +26,6 @@ form{
 }
 .rouge{
     color: red;
-    font-family: Arial, "Times New Roman", sans-serif;
     display: flex;
     float: right;
     margin-right: 100px;
@@ -15,10 +34,7 @@ label {
 display: inline-block;
 align-items: center;
 width: 180px;
-margin: 1px;
 margin-right: 100px;
-font-family: Arial, "Times New Roman", sans-serif;
-font-weight: bold;
 margin-bottom: 20px;
 }
 select{

@@ -31,11 +31,12 @@ function verif()
 //----------------------------------
 function verif2() {
   // verifie le formulaire v2 avec boucle
-  filtre = new RegExp("^[a-z]+$");
+  filtre = new RegExp("^[A-Za-z]+$");
   filtre2 = new RegExp("^([0-9]{5})+$");
   filtre3 = new RegExp("^[_A-Za-z0-9.-]+@[_a-z0-9.-]+.[a-z]{2,4}$");
   filtre4 = new RegExp("^0[1-9]([-. ]?[0-9]{2}){4}$");
-  for (let i = 0; i < 6; i++) {
+  envoyer = document.getElementById("submit")
+  for (let i = 0; i < 9; i++) {
     coordonnee = document.getElementById(i).value;
     resultat = filtre.test(coordonnee);
     if (coordonnee == false && i == 0) {
@@ -55,12 +56,13 @@ function verif2() {
       alert("Veuillez choisir un environnement technique du projet.");break;
     }
     if (coordonnee == "" && i == 5) {
-      alert("Veuillez decrire votre projet.");
-      document.getElementById("test").innerHTML;break;
+      alert("Veuillez decrire votre projet.");break
+    //   document.getElementById("test").innerHTML;break;
     }
     resultat2 = filtre2.test(coordonnee);
     if (resultat2 == false && i == 6) {
-      alert("Veuillez mettre un code postal a cinq chiffre.");break;
+      alert("Veuillez mettre un code postal a cinq chiffre.")
+      envoyer.value= "";break;
     }
     resultat3 = filtre3.test(coordonnee); // n'autorise pas les , dans le nom de l'email regarder les caractere autoriser pour les adresse email
     if (resultat3 == false && i == 7) {
@@ -73,17 +75,16 @@ function verif2() {
     }
   }
 }
-const p = document.getElementById("choix")
-const choixElement = document.getElementById('4');
-const textareaElement = document.getElementById('5');
 
+// const textareaElement = document.getElementById('5');
+const choixElement = document.getElementById('4');//deroulante
+const p = document.getElementById("choix")//choissisez
 choixElement.addEventListener('change', () => {//
-    const choix = choixElement.value;
-    if (choix !== "choix") {
-    // textareaElement.style.display = 'block';  //fait apparaitre une textbox de nul par quand la liste deroulant a changer de "choissisez"
-    p.remove()}
-//   } else {
-//     textareaElement.style.display = 'none';  //l'inverse
-//   }
-  })
-  document.getElementById("0").innerHTML = "*"
+    p.remove()
+})
+    // var choix = choixElement.value;
+    // if (choix !== "choix") {
+    //     textareaElement.style.display = 'block';  //fait apparaitre une textbox de nul par quand la liste deroulant a changer de "choissisez"
+    // else {
+    //     //   textareaElement.style.display = 'none';  //l'inverse
+    //      }
