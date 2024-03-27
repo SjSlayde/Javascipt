@@ -1,0 +1,33 @@
+form{
+    width: 700px;
+}
+#rouge{
+    color: red;
+}
+.rouge{
+    color: red;
+    font-family: Arial, "Times New Roman", sans-serif;
+    display: flex;
+    float: right;
+    margin-right: 100px;
+}
+label {
+display: inline-block;
+align-items: center;
+width: 180px;
+margin: 1px;
+margin-right: 100px;
+font-family: Arial, "Times New Roman", sans-serif;
+font-weight: bold;
+margin-bottom: 20px;
+}
+select{
+margin-top: 10px;
+}
+.finish{
+    display: flex;
+    margin-left: 200px;
+}
+input{
+    margin-right: 10px;
+}

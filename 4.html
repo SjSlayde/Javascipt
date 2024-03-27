@@ -3,37 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>yop4</title>
-    <style>
-fieldset{
-        width: 700px;
-        
-}
-label{
-	display: block;
-    align-items: center;
-	width: 180px;
-	float: left;
-    margin: 1px;
-    margin-right: 100px;
-}
-    </style> 
-  </head>
+    <link rel="stylesheet" href="4.css">
+   </head>
   <body>
-    <div id="label1">Entrez votre proposition</div>
+    <p id="label1">Entrez un nom :</p>
+    <input id="textBox0" value="">
+    <input type="button" id="button1" value="Verifier"><br>
+    <p>deviner le nombre aleatoire</p>
     <input id="textBox1" value="">
-    <input type="button" id="button1" value="Verifier" onclick="verif();">
+    <input type="button" value="Verifier" onclick="verif();">
     <form  method="post">
         <Fieldset>
-            <label for="société">Société: </label><input id="0" type="text" name="société" required><br>
-            <label for="personne">Personne a contacter: </label><input id="1" type="text" name="personne" required><br>
+            <p id="rouge">* C'est zone sont obligatoires(c'est pour faire genre tout est obligatoire)</p>
+            <label for="société">Société: </label><input id="0" type="text" name="société" required><div class="rouge">*</div><br>
+            <label for="personne">Personne a contacter: </label><input id="1" type="text" name="personne" required><div class="rouge">*</div><br>
             <label for="Adresse">Adresse de l'entreprise: </label><textarea id="2" name="Adresse" rows="4" cols="30" required></textarea><br>
-            <label for="CP">Code Postal: </label><input id="CP" type="text" name="CP" required><br>
-            <label for="Ville">Ville: </label><input id="3" type="text" name="Ville" required><br>
-            <label for="Email">Email: </label><input id="Email" type="text" name="Email" required><br>
-            <label for="tel">Téléphone: </label><input id="tel" type="text" name="tel" required><br>
-            <label for="problem">Sélectionnez l'environnement technique du projet:
-            <select id="4" required>
-                <option value="choix0" selected>Choisissez</option>
+            <label for="CP">Code Postal: </label><input id="6" type="text" name="CP" required><div class="rouge">*</div><br>
+            <label for="Ville">Ville: </label><input id="3" type="text" name="Ville" required><div class="rouge">*</div><br>
+            <label for="Email">Email: </label><input id="7" type="text" name="Email" required><div class="rouge">*</div><br>
+            <label for="tel">Téléphone: </label><input id="8" type="text" name="tel" required><div class="rouge">*</div><br>
+            <label for="problem">Sélectionnez l'environnement technique du projet:<select id="4" required>
+                <option id="choix" value="choix" >Choisissez</option>
                 <option value="choix1">Access</option>
                 <option value="choix2">Java</option>
                 <option value="choix3">Delphi</option>
@@ -46,9 +36,9 @@ label{
                 <option value="choix10">Unix</option>
                 <option value="choix11">SQL Server</option>
                 <option value="choix12">Oracle</option>
-                <option value="choix13">Autres...</option></select>
-            </label><textarea id="5" name="problem" rows="8" cols="40" required></textarea><br>
-                <input type="submit" value="Envoyer" onclick="verif2()"><input type="reset" value="Effacer">
+                <option value="choix13">Autres...</option></select></label>
+            <textarea id="5" name="problem" rows="8" cols="40" required></textarea><p id="test"></p>
+                <div class="finish"><input type="submit" value="Envoyer" onclick="verif2()"><input type="reset" value="Effacer"></div>
         </Fieldset>
     </form>
     <script src="4.js"></script>
