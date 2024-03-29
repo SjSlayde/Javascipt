@@ -37,7 +37,7 @@ function verif2() {
   filtre4 = new RegExp("^0[1-9]([-. ]?[0-9]{2}){4}$");
   envoyer = document.getElementById("submit")
   for (let i = 0; i < 9; i++) {
-    coordonnee = document.getElementById(i).value;
+    // coordonnee = document.getElementById(i).value;
     resultat = filtre.test(coordonnee);
     if (coordonnee == false && i == 0) {
       //nom de société = 1
@@ -61,8 +61,7 @@ function verif2() {
     }
     resultat2 = filtre2.test(coordonnee);
     if (resultat2 == false && i == 6) {
-      alert("Veuillez mettre un code postal a cinq chiffre.")
-      envoyer.value= "";break;
+      alert("Veuillez mettre un code postal a cinq chiffre.");break;
     }
     resultat3 = filtre3.test(coordonnee); // n'autorise pas les , dans le nom de l'email regarder les caractere autoriser pour les adresse email
     if (resultat3 == false && i == 7) {
@@ -88,3 +87,5 @@ choixElement.addEventListener('change', () => {//
     // else {
     //     //   textareaElement.style.display = 'none';  //l'inverse
     //      }
+
+    
