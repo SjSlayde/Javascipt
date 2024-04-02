@@ -36,41 +36,41 @@ function verif2() {
   filtre3 = new RegExp("^[_A-Za-z0-9.-]+@[_a-z0-9.-]+.[a-z]{2,4}$");
   filtre4 = new RegExp("^0[1-9]([-. ]?[0-9]{2}){4}$");
   envoyer = document.getElementById("submit")
+  check = true
   for (let i = 0; i < 9; i++) {
-    // coordonnee = document.getElementById(i).value;
+    coordonnee = document.getElementById(i).value;
     resultat = filtre.test(coordonnee);
     if (coordonnee == false && i == 0) {
       //nom de société = 1
-      alert("Veuillez rentrer un nom de société.");break;
+      alert("Veuillez rentrer un nom de société.");return false;
     }
     if (resultat == false && i == 1) {
-      alert("Veuillez mettre une personne a conctater.");break;
+      alert("Veuillez mettre une personne a conctater.");return false;
     }
     if (coordonnee == false && i == 2) {
-      alert("Veuillez mettre une adresse.");break;
+      alert("Veuillez mettre une adresse.");return false;
     }
     if (resultat == false && i == 3) {
-      alert("Veuillez mettre une Ville.");break;
+      alert("Veuillez mettre une Ville.");return false;
     }
     if (coordonnee == "choix" && i == 4) {
-      alert("Veuillez choisir un environnement technique du projet.");break;
+      alert("Veuillez choisir un environnement technique du projet.");return false;
     }
     if (coordonnee == "" && i == 5) {
-      alert("Veuillez decrire votre projet.");break
+      alert("Veuillez decrire votre projet.");return false;
     //   document.getElementById("test").innerHTML;break;
     }
     resultat2 = filtre2.test(coordonnee);
     if (resultat2 == false && i == 6) {
-      alert("Veuillez mettre un code postal a cinq chiffre.");break;
+      alert("Veuillez mettre un code postal a cinq chiffre.");return false;
     }
     resultat3 = filtre3.test(coordonnee); // n'autorise pas les , dans le nom de l'email regarder les caractere autoriser pour les adresse email
     if (resultat3 == false && i == 7) {
-      alert("Veuillez mettre une adresse email.");break;
+      alert("Veuillez mettre une adresse email.");return false;
     }
     resultat4 = filtre4.test(coordonnee);
-    console.log(coordonnee);
     if (resultat4 == false && i == 8) {
-      alert("Veuillez mettre un numéros de téléphone valide.");break;
+      alert("Veuillez mettre un numéros de téléphone valide.");return false;
     }
   }
 }

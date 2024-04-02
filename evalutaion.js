@@ -59,28 +59,31 @@ exo4.addEventListener("click",() => {//debut de la fonctionne
 var PU,QTECOM,PAP = 0,REM=0,PORT,TOT = 0
 PU=prompt("prix unitaire de l'article")
 QTECOM=prompt("nombre d'article")
-TOT= +PU * +QTECOM
+TOT=PU * QTECOM
+PAP=TOT
 if(TOT>99 && TOT<201){
-    REM=((+TOT / 100)*5)//calculre les 5%
-    REM = Math.round(REM * 100)/100
-    PAP= +TOT - +REM}
+    REM=((+TOT / 100)*5);//calculre les 5%
+    REM = Math.round(REM * 100)/100;//arrondis le nombre au deuxieme chiffre aprés la virgule.
+    PAP=TOT - REM
+}
     else if(TOT>200){
         REM=((+TOT / 100)*10)//calculre les 10%
-        REM = Math.round(REM * 100)/100
+        REM = Math.round(REM * 100)/100//arrondis encore on evite les probleme
         PAP=+TOT - +REM}
     if(PAP<301){
-            PAP = TOT
-            PORT= 6
-            PAP=+PAP + +PORT }
+            PORT=6
+            PAP=+PAP + +PORT
+        }
         else if(PAP>300 && PAP<500){
-            PORT=((+PAP / 100)*2)
-            PORT = Math.round(PORT * 100)/100
+            PORT=((+PAP / 100)*2)//ajouter les 2% de frais de port a partir de 300 
+            PORT=Math.round(PORT * 100)/100//arrondis encore on evite les probleme
             PAP=+PAP + +PORT}
         else if(PAP>499){
-            PORT="offert"
+            PORT="offert"//l'offre de l'année fdp(frais de port!!!) offert 
         }
         console.log("prix sans frais de port et remise appliquer :"+TOT)
         console.log("remise appliquer :"+REM)
         console.log("frais de port :"+PORT)
-        console.log("le prix a payer est de :"+PAP)
-})
+        console.log("le prix a payer est de :"+PAP)//F12
+}) 
+//exercice 5 dans le dossiser jarditou
