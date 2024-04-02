@@ -86,4 +86,4 @@ if(TOT>99 && TOT<201){
         console.log("frais de port :"+PORT)
         console.log("le prix a payer est de :"+PAP)//F12
 }) 
-//exercice 5 dans le dossiser jarditou
+//exercice 5 dans contact.js
