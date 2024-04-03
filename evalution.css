@@ -6,7 +6,10 @@ h1{
     color: white;
     font-size: 40px;
 }
-div{
+#parent{
+    display: flex;
+}
+#div{
     width: 200px;
     background-image: url("https://img.freepik.com/photos-gratuite/fond-ecran-abstrait-nebuleuse-ultra-detaille-4_1562-749.jpg");
     display: flex;
@@ -15,6 +18,14 @@ div{
     vertical-align: middle;
     margin-top: 300px;
     margin-left: 850px;
+}
+#yop{
+    display: flex;
+    width: 200px;
+    align-items: center;
+    vertical-align: middle;
+    margin-top: 300px;
+    margin-left: 10px;
 }
 button{
     margin: 10px;

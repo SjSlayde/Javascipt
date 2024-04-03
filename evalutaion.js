@@ -3,9 +3,10 @@ exo1.addEventListener("click",() => {
 var age = 0 , total=0
 var compteur = 0
 var vieux = 0 , moyen=0, jeune =0 
+document.getElementById("text").value ="saisie :"
 while(age!==100){//double securité 
     age =prompt("veuillez selectionner l'age a rajouter")
-    console.log(age)
+    document.getElementById("text").value += age+" ,"
     total= +total + +age//additionne
     compteur++//un compteur quoi
     if(age>99){//compte le centenaire est s'arrete 
@@ -21,21 +22,22 @@ while(age!==100){//double securité
         vieux++
     }
 }
-console.log("le nombre de personne agé est : "+vieux)
-console.log("le nombre de personne dans la moyenne d'age est : "+moyen)
-console.log("le nombre de personne jeune est :" +jeune)
-console.log("le nombre d'age taper est : "+compteur)
-console.log("nombre d' age additionner taper est : "+total)
-console.log("la moyenne des age est de :"+(total / compteur))//ÇA DONNE TOUTE LES INFOS  
+document.getElementById("text").value +="\nle nombre de personne agé est : "+vieux
+document.getElementById("text").value +="\nle nombre de personne dans la moyenne d'age est : "+moyen
+document.getElementById("text").value +="\nle nombre de personne jeune est :" +jeune
+document.getElementById("text").value +="\nle nombre d'age taper est : "+compteur
+document.getElementById("text").value +="\nnombre d' age additionner taper est : "+total
+document.getElementById("text").value +="\nla moyenne des age est de :"+(total / compteur)//ÇA DONNE TOUTE LES INFOS  
 })
 
 exo2 = document.getElementById("multication")
 exo2.addEventListener("click",() => {
 nombre = prompt("saisissez la table voulue")
 resultat = 0
+document.getElementById("text").value ='table de '+nombre
 for(let i=0;i<11;i++){
 resultat= i * nombre
-console.log(i+"x"+nombre+"="+resultat)
+document.getElementById("text").value +='\n'+i+"x"+nombre+"="+resultat
 }})
 
 exo3 = document.getElementById("prenom")
@@ -44,14 +46,16 @@ var tab = ["Audrey", "Aurélien", "Flavien", "Jérémy", "Laurent", "Melik", "No
 var prenom=prompt("veuillez selectionner le prenom souhaiter");
 supp = tab.indexOf(prenom)//donne l'adresse dans le tableux de l'element voulu
 if (supp==-1){
-    alert("erreur")
+    supp = 'erreur'
+    document.getElementById("text").value ="\n"+supp
+    return false
 }
 if(supp>=0){
     tab.splice(supp,1)//suprimer l'element choisie
-    tab.push("blanc xptdr")
+    tab.push("supp")
 }
-console.log(supp)
-console.log(tab)
+document.getElementById("text").value =supp
+document.getElementById("text").value +='\n'+tab
 })
 
 exo4 = document.getElementById("pourcentage")
@@ -81,9 +85,9 @@ if(TOT>99 && TOT<201){
         else if(PAP>499){
             PORT="offert"//l'offre de l'année fdp(frais de port!!!) offert 
         }
-        console.log("prix sans frais de port et remise appliquer :"+TOT)
-        console.log("remise appliquer :"+REM)
-        console.log("frais de port :"+PORT)
-        console.log("le prix a payer est de :"+PAP)//F12
-}) 
-//exercice 5 dans contact.js
+        document.getElementById("text").value ="prix sans frais de port et remise appliquer :"+TOT
+        document.getElementById("text").value +="\nremise appliquer :"+REM
+        document.getElementById("text").value +="\nfrais de port :"+PORT
+        document.getElementById("text").value +="\nle prix a payer est de :"+PAP
+})
+//exercice 5 dans contact.js et .html
