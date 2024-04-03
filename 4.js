@@ -108,4 +108,3 @@ choixElement.addEventListener('change', () => {//
         }
         exobox.value="le nombre de voyelle que contient "+mot+" :"+compteur
     })
-

@@ -1,0 +1,10 @@
+#parentodo{
+    display: flex;
+}
+#todo{
+    flex: 30%;
+}
+#pourcentage{
+    flex: 70%;
+    color: red;
+}
