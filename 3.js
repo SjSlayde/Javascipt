@@ -113,15 +113,19 @@ console.log(nbVoyelles)*/
 B8.addEventListener('click',function voyellecasser(){
 var N, // ma version a reparer elle est casser avec les commande fournis avec l'exo compte les voyelle super utile non?
 N=prompt("saisie")
-let nbVoyelles = 0;
-let voyelles = ['a', 'e', 'i', 'o', 'u', 'y'];
-for (let i =0; i<N.length;i++) {
-    if(i>0){
-        alert("c'est casser aller sur la page 4 a la fin merci cette boucle s'autodetruira dans 3,2,1 Boum\"c'est faux je sais pas encore faire ça\"");break
-    }
-    N.substring(i,i+1)
+N=N.toLowerCase();
+var nbVoyelles = 0;
+var voyelles = ['a','e','i','o','u','y'];
+for (let i =0; i<N.length;i++){
+    // if(i>0){
+    //     alert("c'est casser aller sur la page 4 a la fin merci cette boucle s'autodetruira dans 3,2,1 Boum\"c'est faux je sais pas encore faire ça\"");break
+    // }
+    check=N.substring(i,i+1)
     console.log(N.substring(i,i+1))
-    voyelles.indexOf(nbVoyelles)
+    console.log(check.indexOf(voyelles))
+    if(N.indexOf(voyelles)!==-1){
+        nbVoyelles++
+    }
 }
 console.log(nbVoyelles)
 })
