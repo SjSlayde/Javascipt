@@ -17,3 +17,18 @@ bouttontodo.addEventListener('click', function addElement() {
   var currentDiv = document.getElementById("test2");
   document.getElementById("pourcentage").insertBefore(newDiv, currentDiv);
 })
+
+brandom=document.getElementById("random")
+brandom.addEventListener('click',function mdprandom(){
+  n=Math.floor(Math.random(10)*40)
+  console.log(n)
+  var alpha="abcdefghijklmnopqrstuvwxyz1234567890".split("");
+  var rnd_ltt=alpha[Math.floor(Math.random()*36)]
+  mdp=rnd_ltt
+for(let i=0;i<n;i++){
+var rnd_ltt=alpha[Math.floor(Math.random()*36)];
+mdp=mdp + rnd_ltt
+console.log(rnd_ltt)
+}
+console.log(mdp)
+})
