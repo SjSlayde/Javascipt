@@ -1,3 +1,7 @@
+B1= document.getElementById("B1")
+B2= document.getElementById("B2")
+B3= document.getElementById("B3")
+B1.addEventListener('click',function impair(){
 var a,b
 a=prompt("entrer un nombre")//regarde si a est un nombre pair ou non
 b = (a%2)
@@ -9,7 +13,9 @@ b = (a%2)
     {
         alert("nombre impair")
     }
-
+})
+    
+B2.addEventListener('click',function majeur(){
     var age,année//vous dis si vous etes majeur si vous etes un peut con
     année=prompt("entrer votre année de naissance")
     var myDate1 = new Date() //ptite upgrade 
@@ -22,7 +28,9 @@ b = (a%2)
         else{
             alert("vous etes mineure")
         }
+    })
     
+    B3.addEventListener('click',function calculette(){
     var c,d,e,f//fait une operation(toujours pas le snip de csgo) avec l'operateur souhaiter 
     c= prompt("entrer le premier chiffre")
     d= prompt("entrer le deuxieme chiffre")
@@ -49,3 +57,4 @@ b = (a%2)
         else{
             alert("j'avais dis le snipe")
         }
+    })

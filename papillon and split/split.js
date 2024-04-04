@@ -4,4 +4,5 @@ function strtok(str1, str2,n){
     return k[n-1]
     }
     str1 = strtok
-    console.log(strtok (str1,";", 3))//afiche amiens comme demander 
+    var mot=prompt("quelle infos souhaiter vous (1 a 4)")
+    console.log(strtok (str1,";", mot))//afiche amiens comme demander 
