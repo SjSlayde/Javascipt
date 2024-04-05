@@ -1,15 +1,16 @@
 var pierre = document.getElementById("pierre")//1
 var papier = document.getElementById("papier")//2
 var ciseaux = document.getElementById("ciseaux")//3
+var reset = document.getElementById("reset")
 var resultat = document.getElementById("resultat")//ciseaux<=pierre<=papier<=ciseaux
 var loose=0,win=0,egality=0//3<=2<=1
-var BO="a defenir",round=0
-if (BO=="a defenir") {
+var BO,round=0
     BO=parseInt(prompt('nombre de round'))
-}
+    console.log(Math.floor(BO/2)+1)
+
     papier.addEventListener('click', function (){
         joueur=1
-        round++ 
+        round++
         test(joueur)
         resultat.value+="\nround : "+round
         resultat.value+="\nnombre de loose : "+loose
@@ -18,15 +19,12 @@ if (BO=="a defenir") {
         if(round==BO){
             if(loose<win){
                 alert("GG vous avez gagner");
-                BO=""
             }
             else if(loose>win){
                 alert('Vous avez perdue');
-                BO=""
             }
             else if(loose == win){
                 alert("égalité");
-                BO=""
             }
         }
     })
@@ -42,19 +40,16 @@ if (BO=="a defenir") {
         if(round==BO){
             if(loose<win){
                 alert("GG vous avez gagner");
-                BO=""
             }
             else if(loose>win){
                 alert('Vous avez perdue');
-                BO=""
             }
             else if(loose == win){
                 alert("égalité");
-                BO=""
             }
         }
     })
-    
+
     ciseaux.addEventListener('click', function (){
         joueur=3
         round++
@@ -65,18 +60,20 @@ if (BO=="a defenir") {
         resultat.value+="\nnombre de win : "+win
         if(round==BO){
             if(loose<win){
-                alert("GG vous avez gagner");
-                BO=""
+                alert("GG vous avez gagner")
             }
             else if(loose>win){
-                alert('Vous avez perdue');
-                BO=""
+                alert('Vous avez perdue')
             }
             else if(loose == win){
-                alert("égalité");
-                BO=""
+                alert("égalité")
             }
         }
+    })
+
+    reset.addEventListener('click',function (){
+        BO=parseInt(prompt('nombre de round'))
+        console.log(Math.floor(BO/2)+1)
     })
 
 function test(joueur){
