@@ -77,15 +77,19 @@ var BO,round=0
     })
 
 function test(joueur){
+    mainordisigne= document.getElementById("main")
     let ordi = Math.floor(Math.random(1) *3)+1
     if(ordi==1){
         ordimain="papier"
+        mainordisigne.src="img/papier.jpeg"
     }
     else if(ordi==2){
         ordimain="pierre"
+        mainordisigne.src="img/pierre.jpg"
     }
     else{
         ordimain="ciseaux"
+        mainordisigne.src="img/ciseaux.jpg"
     }
     if(ordi==joueur){
         resultat.value="l'ordi joue : "+ordimain
